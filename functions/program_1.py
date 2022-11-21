@@ -6,7 +6,7 @@
 # @Github ：https://github.com/hzz12138
 
 """
-    program 1:函数运行计时器的装饰器实现.
+    program 1:函数运行计时器的装饰器实现
 """
 
 import time
