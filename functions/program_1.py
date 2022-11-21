@@ -18,7 +18,6 @@ def timer(func):
         result = func(*args, **kwargs)
         finish_time = time.perf_counter()
         cost_time = finish_time - start_time
-        cost_time = 7200
         if cost_time < 60:
             print(f"""func:{func.__name__}, took time:{'%.4f' % cost_time} seconds""")
         elif cost_time < 3600:
