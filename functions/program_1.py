@@ -24,13 +24,15 @@ def timer(func):
         elif cost_time < 3600:
             minutes = (cost_time % 3600) // 60
             seconds = (cost_time % 60)
-            print(f"""func:{func.__name__}, took time:{'%d'%minutes} minutes,{'%.1f'%seconds} seconds""")
+            print(f"""func:{func.__name__}, took time:{'%d' % minutes} minutes,{'%.1f' % seconds} seconds""")
         else:
             hours = cost_time // 3600
             minutes = (cost_time % 3600) // 60
             seconds = (cost_time % 60)
-            print(f"""func:{func.__name__}, took time:{'%d'%hours} hours,{'%d'%minutes} minutes,{'%.1f'%seconds} seconds""")
+            print(
+                f"""func:{func.__name__}, took time:{'%d' % hours} hours,{'%d' % minutes} minutes,{'%.1f' % seconds} seconds""")
         return result
+
     return wrapper
 
 
@@ -42,6 +44,7 @@ def waste1(num):
         for i in range(num):
             my_list.append(i)
         return my_list
+
     arr = waste_some_time(num)
     return arr
 
